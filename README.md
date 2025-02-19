@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# Caption Editor SDK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+The Caption Editor SDK is a web-based application designed for seamless caption editing. Users can import videos and corresponding SRT files to modify captions, adjust synchronization, and apply styling. The system focuses on providing an interactive and user-friendly experience similar to Submagic.co.
 
-Currently, two official plugins are available:
+## 🛠 Installation & Setup Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** (v16 or later)
+- **npm** or **yarn**
+- **Git**
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Clone the Repository
+```sh
+git clone (https://github.com/kapsedivya31/Caption-Editor)
+cd Caption-Editor
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Install Dependencies
+```sh
+npm install  # or yarn install
 ```
+
+### Start the Development Server
+```sh
+npm run dev  # or yarn dev
+```
+
+### Build for Production
+```sh
+npm run build  # or yarn build
+```
+
+## ✨ Features & Functionalities
+- **Import Video & SRT Files**: Upload video files with or without embedded captions.
+- **Styling Customization**: Change font type, size, color, background, and alignment.
+- **Real-time Preview**: View edited captions overlaid on the video instantly.
+- **Drag & Drop Support**: Easily reposition captions within the video frame.
+- **Keyboard Shortcuts**: Enhanced accessibility and user efficiency.
+
+## 🏗 Technologies Used
+- **Frontend**: React.js, TypeScript
+- **State Management**: Redux, Zustand, or Context API
+- **Styling**: Tailwind CSS, Styled Components
+- **File Handling**: Web APIs, third-party SRT parsing libraries
+- **Video Processing**: WebAssembly, WebCodecs API, FFMPEG.js
+
+## 🚀 How to Run the Project
+1. **Ensure all dependencies are installed** (`npm install`)
+2. **Start the local development server** (`npm run dev`)
+3. **Access the app in the browser** at `http://localhost:3000`
+
+## 🌐 API Details (if any)
+This project is frontend-only. API calls for saving and retrieving data are **mocked** for demonstration.
+
+## ❓ Troubleshooting Guide
+### Common Issues & Solutions
+- **Issue: Application fails to start**
+  - Ensure you are using **Node.js v16 or later**.
+  - Run `npm install` again to check missing dependencies.
+- **Issue: Video file not loading**
+  - Ensure the uploaded file format is supported (`.mp4`, `.webm`).
+- **Issue: Captions not syncing properly**
+  - Check the structure of the SRT file. Ensure timestamps are correctly formatted.
+
+---
+🚀 Happy coding!
